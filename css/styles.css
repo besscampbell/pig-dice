@@ -1,0 +1,9 @@
+.img {
+  height: auto;
+  width: 300px;
+  transform: scale(1);
+}
+
+.img:active {
+  transform: scale(.90);
+}

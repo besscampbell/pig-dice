@@ -58,6 +58,9 @@ Expect: player1.roundScore = [1,2,3,4].toEqual(totalScore)
 Test: set roundScore array to zero
 Expect: player1.roundscore = [1,2,3,4].toEqual([0])
 
+Test: when totalScore reaches 100 or above, the player wins
+Expect: player1.totalScore = 100, alert "you've won!"
+
 ## Known Bugs
 * 
 

@@ -8,5 +8,35 @@
   <title>Pig Dice Game</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3" style="max-width: 18 rem;">
+          <div class="card-header">Player 1</div>
+          <div class="card-body">
+            <h5 class="card-title">Total Score:<span id="playerOneScore"></span></h5>
+            <p class="card-text">Your rolls:<span id="playerOneArray"></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img class="img" src="img/pig.png">
+        <div class="card text-white bg-warning mb-3" style="max-width: 18 rem;">
+          <div class="card-header">Click the pig to roll your die!</div>
+          <div class="card-body">
+            <h5 class="card-title"><button type="button" class="btn btn-danger">HOLD</button></h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white bg-success mb-3" style="max-width: 18 rem;">
+          <div class="card-header">Player 2</div>
+          <div class="card-body">
+            <h5 class="card-title">Total Score:<span id="playerTwoScore"></span></h5>
+            <p class="card-text">Your rolls:<span id="playerTwoArray"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>

@@ -19,13 +19,9 @@ Player.prototype.diceRoll = function(){
       this.roundScore = [];
   }
   else if (roll !=1) {
-    if (player1.turn = true) {
-      player1.roundScore.push(roll);
+    if (this.turn = true) {
+      this.roundScore.push(roll);
     }
-    else (player2.turn = true) {
-      player2.roundScore.push(roll);
-    }
-  
   }
 }
 
@@ -36,6 +32,9 @@ Player.prototype.hold = function() {
   player1.turn= !player1.turn
   player2.turn= !player2.turn
   this.roundScore = [];
+  if (this.totalScore >= 100) {
+    alert("Back to the sty! You pass the pigs the best! You win!");
+  }
 };
 
 
