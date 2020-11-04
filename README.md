@@ -47,10 +47,16 @@ expect: start with player1turn = true && player2.turn = false: then diceRoll=1, 
 Test: when players roll anything but a 1 and their turn value is true, add that number to the roundScore array in player object
 Expect: player1 rolls (4), player1.roundScore.push(4);
 
-Description: Player()
+Description: Player.prototype.hold()
 
 Test: player object should store playername, round score, turn value, total score
 Expect:  let player2 = new Player("player2", false, [], 0);
+
+Test: should sum roundScore and add it to totalScore
+Expect: player1.roundScore = [1,2,3,4].toEqual(totalScore)
+
+Test: set roundScore array to zero
+Expect: player1.roundscore = [1,2,3,4].toEqual([0])
 
 ## Known Bugs
 * 
