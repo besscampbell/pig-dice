@@ -1,4 +1,9 @@
 // Business Logic
+let users = new Users();
+let player1 = new Player("player1", true, [], 0);
+let player2 = new Player("player2", false, [], 0);
+users.players.push(player1, player2);
+
 
 function Player (user, turn, roundScore, totalScore) {
   this.user = user;
@@ -7,8 +12,9 @@ function Player (user, turn, roundScore, totalScore) {
   this.totalScore = totalScore;
 }
 
-let player1 = new Player("player1", true, [], 0);
-let player2 = new Player("player2", false, [], 0);
+function Users () {
+  this.players = []
+}
 
 Player.prototype.diceRoll = function(){
   let roll = 1+ Math.floor(Math.random()*6);
@@ -19,7 +25,7 @@ Player.prototype.diceRoll = function(){
       this.roundScore = [];
   }
   else if (roll !=1) {
-    if (this.turn = true) {
+    if (this.turn === true) {
       this.roundScore.push(roll);
     }
   }
@@ -37,15 +43,25 @@ Player.prototype.hold = function() {
   }
 };
 
+Users.prototype.whoseTurn = function() {
+  for (let i=0; i< this.players.length; i++){
+    if (this.players[i]){
+      if (this.players[i].turn === true) {
+      this.players[i].diceRoll();
+      }
+    }  
+  }
+}
+
 
 // Logic UI
 $(document).ready(function() {
 
   $(".img").click(function(){
-    if (player1.turn = true) {
-      player1.diceRoll();
-    }
-    else {player2.diceRoll();
-    }
+    // $("#playerOneArray").html(player1.diceRoll());
+    users.whoseTurn();
   });  
+  $("#hold").click(function(){
+
+  })
 });
