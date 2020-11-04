@@ -1,12 +1,12 @@
 # What Programming Language is for You Webpage
 
-#### **This webpage asks five questions and returns the programming language that best fits the user. Patrick Osten, 10/23/2020**
+#### **. Patrick Osten, Bess Campbell, 10/23/2020**
 
-**[Click here to open in web browser](https://posten040.github.io/week-2-project/index.html)**
+**[Click here to open in web browser]**
 
 ## Description
 
-Ever wondered what programming language you should learn? Wonder no more. This website asks five short questions and through a series of highly intelligent and powerful 'if, then' statements chooses the best programming language that would suit the user based on the questions.
+
 
 ## Installation Requirements
 
@@ -19,7 +19,7 @@ Ever wondered what programming language you should learn? Wonder no more. This w
 ## Setup
 
 #### From the web
-1. Go to this [GitHub Repo Page](https://github.com/POsten040/week-2-project).
+1. Go to this [GitHub Repo Page]().
 2. Click the "Code" and click the 'Download zip' option.
 3. Unzip the file, navigate to the root directory (week-1-project folder).
 4. opent the 'index.html' file with your web browser.
@@ -29,15 +29,20 @@ Ever wondered what programming language you should learn? Wonder no more. This w
 #### From Terminal
 
 1. Open GitBash/Bash, type 
-: `git clone {https://github.com/POsten040/week-2-project}`
+: `git clone {}`
 2. Navigate to the week-1-project directory and type
 : `code .`
 3. Your code editor will open the files, from there you must open the index.html file in your browser.
 
+## Specs
 
+Description: diceRoll()
+
+Test: user clicks button, gets a number from 1-6
+Expect: user clicks button, get (4)
 
 ## Known Bugs
-* once a response is generated, hitting the reset button does not hide the response. Creating a new response or refreshing the page does. 
+* 
 
 ## Support and contact details
 
