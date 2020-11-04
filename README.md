@@ -41,6 +41,17 @@ Description: diceRoll()
 Test: user clicks button, gets a number from 1-6
 Expect: user clicks button, get (4)
 
+Test: if diceRoll() = 1, change player turn to false or true
+expect: start with player1turn = true && player2.turn = false: then diceRoll=1, player1.turn = false && diceRoll=1, player2.turn = true
+
+Test: when players roll anything but a 1 and their turn value is true, add that number to the roundScore array in player object
+Expect: player1 rolls (4), player1.roundScore.push(4);
+
+Description: Player()
+
+Test: player object should store playername, round score, turn value, total score
+Expect:  let player2 = new Player("player2", false, [], 0);
+
 ## Known Bugs
 * 
 
