@@ -24,20 +24,23 @@ Player.prototype.diceRoll = function(){
       player2.turn= !player2.turn
       this.roundScore = [];
       console.log(this);
+      return this.roundScore;
   } else if (roll !=1) {
       this.roundScore.push(roll);
+      return this.roundScore;
   }
 }
 
 Player.prototype.hold = function() {
   if (this.roundScore[0] != 0) {
-    player1.turn= !player1.turn
-    player2.turn= !player2.turn
     const add = (a, b) => a+b;
     this.totalScore = this.totalScore + this.roundScore.reduce(add);
     console.log(this.totalScore);
     this.roundScore = [];
+    player1.turn= !player1.turn
+    player2.turn= !player2.turn
     console.log(this);
+    return this.roundScore;
     if (this.totalScore >= 100) {
       alert("Back to the sty! You pass the pigs the best! You win!");
     }
@@ -46,11 +49,11 @@ Player.prototype.hold = function() {
 
 Users.prototype.whoseTurn = function() {
   for (let i=0; i< this.players.length; i++){
-    if (this.players[i]){
+    // if (this.players[i]){
       if (this.players[i].turn === true) {
-      this.players[i].diceRoll();
+      return this.players[i].diceRoll();
       }
-    }  
+    // }  
   }
 }
 
@@ -66,13 +69,22 @@ Users.prototype.holdTurn = function() {
 }
 
 // Logic UI
+
 $(document).ready(function() {
 
   $(".img").click(function(){
+    let player1Score = player1.roundScore
+    $("#playerOneArray").text(player1Score + " ")
     // $("#playerOneArray").html(player1.diceRoll());
     users.whoseTurn();
+    // });
   });  
   $("#hold").click(function(){
+    
     users.holdTurn();
   });
+  // $(".img").click(function() { document.getElementById("#playerOneArray").innerHTML = player1.roundScore})
+  // let player1Score = player1.roundScore
+  // $(".img").click(function(){$("#playerOneArray").text(player1Score)})
+  // console.log(player1.roundScore)
 });
