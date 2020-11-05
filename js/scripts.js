@@ -23,25 +23,21 @@ Player.prototype.diceRoll = function(){
       player1.turn= !player1.turn
       player2.turn= !player2.turn
       this.roundScore = [];
-  }
-  else if (roll !=1) {
-    if (this.turn === true) {
+      console.log(this);
+  } else if (roll !=1) {
       this.roundScore.push(roll);
-    }
   }
 }
 
 Player.prototype.hold = function() {
-  if (this.roundScore[0] === 0) {
-    console.log("nope")
-  }
-  else {
+  if (this.roundScore[0] != 0) {
+    player1.turn= !player1.turn
+    player2.turn= !player2.turn
     const add = (a, b) => a+b;
     this.totalScore = this.totalScore + this.roundScore.reduce(add);
     console.log(this.totalScore);
-    player1.turn= !player1.turn
-    player2.turn= !player2.turn
     this.roundScore = [];
+    console.log(this);
     if (this.totalScore >= 100) {
       alert("Back to the sty! You pass the pigs the best! You win!");
     }
@@ -60,14 +56,14 @@ Users.prototype.whoseTurn = function() {
 
 Users.prototype.holdTurn = function() {
   for (let i=0; i< this.players.length; i++){
-    if (this.players[i]){
+    // if (this.players[i]){
       if (this.players[i].turn === true) {
-      this.players[i].hold();
+        console.log(this.players[i]);
+        return this.players[i].hold();
       }
-    }  
+    // }  
   }
 }
-
 
 // Logic UI
 $(document).ready(function() {
@@ -78,5 +74,5 @@ $(document).ready(function() {
   });  
   $("#hold").click(function(){
     users.holdTurn();
-  })
+  });
 });
