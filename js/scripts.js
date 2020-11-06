@@ -70,15 +70,24 @@ Users.prototype.holdTurn = function() {
 
 // Logic UI
 
+// Player.prototype.dislplayUsersScores = function() {
+//   let player1Score = $("#playerOneArray");
+//   let player2Score = $("#playerTwoArray");
+//   player1Score.text(player1.roundScore);
+//   player2Score.text(player2.roundScore);
+//   }
+
 $(document).ready(function() {
 
+
   $(".img").click(function(){
+    // player1.displayUsersScores();
     let player1Score = player1.roundScore
     $("#playerOneArray").text(player1Score + " ")
     // $("#playerOneArray").html(player1.diceRoll());
     users.whoseTurn();
-    // });
-  });  
+    });
+  // });  
   $("#hold").click(function(){
     
     users.holdTurn();
