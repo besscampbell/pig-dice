@@ -6,7 +6,7 @@
 
 ## Description
 
- Click the pig to roll the die. When it is your turn make sure you decide to hold before it is too late or when your roll a 1 you will lose your points for that turn. Points are compiled as you roll. When you roll a 1 or decide to hold your point your turn is over. The first player to 100 wins!
+ Click the pig to roll the die. When it is your turn make sure you decide to hold before it is too late or when your roll a 1 you will lose your points for that turn. Points are compiled as you roll. When you roll a 1 or decide to hold your points your turn is over. The first player to 100 wins!
 
 ## Installation Requirements
 
