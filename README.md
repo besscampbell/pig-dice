@@ -64,7 +64,8 @@ Test: "It should announce that a player has won when totalScore reaches 100 or a
 Expect: player1.totalScore = 100, alert "you've won!"
 
 ## Known Bugs
-* 
+
+Hold button will return error if pressed more than once but should not affect game.
 
 ## Support and contact details
 
