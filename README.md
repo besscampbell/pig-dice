@@ -27,7 +27,7 @@
 --or--
 
 1. Paste <https://besscampbell.github.io/pig-dice/> into your browser
-2 Or follow this link [Pig Dice](https://besscampbell.github.io/pig-dice/)
+2. Or follow this link [Pig Dice](https://besscampbell.github.io/pig-dice/)
 
 #### From Terminal
 
